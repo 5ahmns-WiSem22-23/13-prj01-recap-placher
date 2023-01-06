@@ -12,6 +12,8 @@ public class CollectablesManager : MonoBehaviour
     private bool marshmallowOnBack;
 
     private int marshmallowCount;
+    [SerializeField]
+    private Text counter;
 
     public bool pinkMarshmallowCollected = false;
     public bool blueMarshmallowCollected = false;
@@ -56,7 +58,7 @@ public class CollectablesManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      
+        counter.text = marshmallowCount.ToString();
     }
 
    
