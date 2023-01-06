@@ -4,15 +4,18 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class CollectiblesManager : MonoBehaviour
+public class CollectablesManager : MonoBehaviour
 {
+    [SerializeField]
+    private CollectablesSpawn collectablesSpawn;
+
     private bool marshmallowOnBack;
 
     private int marshmallowCount;
 
-    private bool pinkMarshmallowCollected = false;
-    private bool blueMarshmallowCollected = false;
-    private bool greenMarshmallowCollected = false;
+    public bool pinkMarshmallowCollected = false;
+    public bool blueMarshmallowCollected = false;
+    public bool greenMarshmallowCollected = false;
     private bool whiteMarshmallowCollected = false;
 
     private SpriteRenderer spriteRenderer;
@@ -54,7 +57,6 @@ public class CollectiblesManager : MonoBehaviour
     void Update()
     {
       
-
     }
 
    
@@ -63,7 +65,7 @@ public class CollectiblesManager : MonoBehaviour
     {
         if (other.name == "marshmallow_pink" && !marshmallowOnBack)
         {
-            Destroy(other.gameObject);
+            Destroy(collectablesSpawn.marshmallows[0]);
             marshmallowOnBack = true;
             pinkMarshmallowCollected = true;
             spriteRenderer.sprite = catPinkMarshmallow;
@@ -72,7 +74,7 @@ public class CollectiblesManager : MonoBehaviour
 
         if (other.name == "marshmallow_blue" && !marshmallowOnBack)
         {
-            Destroy(other.gameObject);
+            Destroy(collectablesSpawn.marshmallows[1]);
             marshmallowOnBack = true;
             blueMarshmallowCollected = true;
             spriteRenderer.sprite = catBlueMarshmallow;
@@ -82,7 +84,7 @@ public class CollectiblesManager : MonoBehaviour
 
         if (other.name == "marshmallow_green" && !marshmallowOnBack)
         {
-            Destroy(other.gameObject);
+            Destroy(collectablesSpawn.marshmallows[2]);
             marshmallowOnBack = true;
             greenMarshmallowCollected = true;
             spriteRenderer.sprite = catGreenMarshmallow;
@@ -91,7 +93,7 @@ public class CollectiblesManager : MonoBehaviour
 
         if (other.name == "marshmallow_white" && !marshmallowOnBack)
         {
-            Destroy(other.gameObject);
+            Destroy(collectablesSpawn.marshmallows[3]);
             marshmallowOnBack = true;
             whiteMarshmallowCollected = true;
             spriteRenderer.sprite = catWhiteMarshmallow;
@@ -107,18 +109,22 @@ public class CollectiblesManager : MonoBehaviour
             if (pinkMarshmallowCollected)
             {
                 pinkMarshmallow.SetActive(true);
+                pinkMarshmallowCollected = false;
             }
             if (blueMarshmallowCollected)
             {
                 blueMarshmallow.SetActive(true);
+                blueMarshmallowCollected = false;
             }
             if (greenMarshmallowCollected)
             {
                 greenMarshmallow.SetActive(true);
+                greenMarshmallowCollected = false;
             }
             if (whiteMarshmallowCollected)
             {
                 whiteMarshmallow.SetActive(true);
+                whiteMarshmallowCollected = false;
             }
 
             if (other.name == "hotchocolate" && marshmallowCount > 3)

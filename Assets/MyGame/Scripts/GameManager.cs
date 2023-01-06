@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
 
-    private float timeRemaining = 30;
+    private float timeRemaining = 180;
     [SerializeField]
     private Text timeText;
 
