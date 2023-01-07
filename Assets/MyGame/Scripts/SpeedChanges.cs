@@ -8,6 +8,9 @@ public class SpeedChanges : MonoBehaviour
     private GameObject longMarshmallow;
 
     [SerializeField]
+    private GameObject cocoaPuddle;
+
+    [SerializeField]
     private PlayerManager playerManager;
 
     [SerializeField]
@@ -20,6 +23,11 @@ public class SpeedChanges : MonoBehaviour
         {
             SpawnBooster(longMarshmallow);
         }
+
+        for (int i = 0; i < 3; i++)
+        {
+            SpawnBooster(cocoaPuddle);
+        }
     }
 
     // Update is called once per frame
@@ -30,8 +38,14 @@ public class SpeedChanges : MonoBehaviour
 
     void SpawnBooster(GameObject booster)
     {
-        Vector2 spawnPoint = new Vector2(Random.Range(-30, 30), Random.Range(-30, 30));
+        Vector2 spawnPoint = new Vector2(Random.Range(0, 20), Random.Range(0, 20));
         Instantiate(booster, spawnPoint, Quaternion.identity);
+    }
+
+    void SpawnPuddle(GameObject puddle)
+    {
+        Vector2 spawnPoint = new Vector2(Random.Range(0, 20), Random.Range(0, 20));
+        Instantiate(puddle, spawnPoint, Quaternion.identity);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -42,16 +56,39 @@ public class SpeedChanges : MonoBehaviour
             Destroy(other.gameObject);
             playerManager.normalSpeed = playerManager.normalSpeed + 5;
             player.transform.localScale = new Vector3((float)0.3, (float)0.3, (float)0.3);
-            StartCoroutine(WaitTime());
+            StartCoroutine(WaitTimeBooster());
+        }
+
+    }
+
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.tag == "puddle")
+        {
+            playerManager.normalSpeed = 1;
         }
     }
 
-    private IEnumerator WaitTime()
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.tag == "puddle")
+        {
+            StartCoroutine(WaitTimePuddle());
+        }
+    }
+
+    private IEnumerator WaitTimeBooster()
     {
         Debug.Log("start coroutine");
         yield return new WaitForSeconds(5);
         player.transform.localScale = new Vector3((float)0.2, (float)0.2, (float)0.2);
         playerManager.normalSpeed = playerManager.normalSpeed - 5;
+    }
+
+    private IEnumerator WaitTimePuddle()
+    {
+        yield return new WaitForSeconds(2);
+        playerManager.normalSpeed = 5;
     }
 
 }

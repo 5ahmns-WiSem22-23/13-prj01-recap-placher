@@ -50,7 +50,7 @@ public class CollectablesSpawn : MonoBehaviour
 
     void SpawnMarshmallows(GameObject marshmallow)
     {
-       Vector2 spawnPoint = new Vector2(Random.Range(-30, 30), Random.Range(-30, 30));
+       Vector2 spawnPoint = new Vector2(Random.Range(0, 20), Random.Range(0, 20));
         marshmallow.transform.position = spawnPoint;
     }
 }
