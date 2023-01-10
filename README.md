@@ -10,6 +10,7 @@ Windows 11, Unity 2020.1.5f1, Visual Studio 2019
 WebGL 1280x720 
 
 ### Visuals: 
+<img src="/visuals/visual1.jpg" alt="Marshmallow game" width =300>
 
 ### Project state: 
 resolving issues
