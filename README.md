@@ -1,28 +1,17 @@
-# Template2D-Unity202015f1
+# Marshmallow Hot Choclate 
 
 ### Project description: 
-Introduction/Project summary 
+Help a cat to keep warm during winter by collecting some marshmallows so she enjoy her hot chocolate. Be careful though, there is some of it spilled on the ground, that will slow you down. On the other hand there are some extra marshmallows giving her more energy to get through the search.
 
 ### Development platform: 
-(OS, Unity Version, Visual Studio Version, used SDKs)
+Windows 11, Unity 2020.1.5f1, Visual Studio 2019
 
 ### Target platform: 
-WebGL, Mobile, VR Device incl. reference resolution 
+WebGL 1280x720 
 
 ### Visuals: 
-Screenshots (concept and experience), Video
-
-### Necessary setup/execution steps: 
-Installation process, e.g. step by step instructions that I can run the project after cloning it
-
-### Third party material: 
-(if used Fonts, Sounds, Music, Graphics, Materials, Code etc.)
 
 ### Project state: 
-incl. progress in percent
+resolving issues
 
-### Limitations: 
-
-### Lessons Learned: 
-
-Copyright by you :)
+Copyright by Pia Lacher
