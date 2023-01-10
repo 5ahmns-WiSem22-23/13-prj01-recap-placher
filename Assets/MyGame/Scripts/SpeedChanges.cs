@@ -82,7 +82,7 @@ public class SpeedChanges : MonoBehaviour
         Debug.Log("start coroutine");
         yield return new WaitForSeconds(5);
         player.transform.localScale = new Vector3((float)0.2, (float)0.2, (float)0.2);
-        playerManager.normalSpeed = playerManager.normalSpeed - 5;
+        playerManager.normalSpeed = 5;
     }
 
     private IEnumerator WaitTimePuddle()
