@@ -1,4 +1,4 @@
-# Marshmallow Hot Choclate 
+# 13-prj01-recap-placher
 
 ### Project description: 
 Help a cat to keep warm during winter by collecting some marshmallows so she enjoy her hot chocolate. Be careful though, there is some of it spilled on the ground, that will slow you down. On the other hand there are some extra marshmallows giving her more energy to get through the search.
