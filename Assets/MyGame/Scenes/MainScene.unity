@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 192441042}
   - component: {fileID: 192441041}
   m_Layer: 0
-  m_Name: couch-3879012
+  m_Name: Couch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -217,7 +217,7 @@ GameObject:
   - component: {fileID: 206661872}
   - component: {fileID: 206661874}
   m_Layer: 0
-  m_Name: hotchocolate
+  m_Name: Hotchocolate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1065,7 +1065,7 @@ GameObject:
   - component: {fileID: 1072887422}
   - component: {fileID: 1072887421}
   m_Layer: 0
-  m_Name: puddle
+  m_Name: Puddle
   m_TagString: puddle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1206,7 +1206,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1152417121}
   m_Layer: 0
-  m_Name: marshmallow_choc
+  m_Name: Marshmallow_choc
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1715,7 +1715,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1808412451}
   m_Layer: 0
-  m_Name: speedManager
+  m_Name: SpeedManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2102,7 +2102,7 @@ GameObject:
   - component: {fileID: 2067879746}
   - component: {fileID: 2067879745}
   m_Layer: 0
-  m_Name: marshmallow_booster
+  m_Name: Marshmallow_booster
   m_TagString: booster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2251,7 +2251,7 @@ GameObject:
   - component: {fileID: 1612121301425083199}
   - component: {fileID: 1612121301425083197}
   m_Layer: 0
-  m_Name: marshmallow_green
+  m_Name: Marshmallow_green
   m_TagString: collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2320,7 +2320,7 @@ GameObject:
   - component: {fileID: 4624604665811066561}
   - component: {fileID: 4624604665811066575}
   m_Layer: 0
-  m_Name: marshmallow_pink
+  m_Name: Marshmallow_pink
   m_TagString: collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2469,7 +2469,7 @@ GameObject:
   - component: {fileID: 5662046134992296109}
   - component: {fileID: 5662046134992296019}
   m_Layer: 0
-  m_Name: marshmallow_white
+  m_Name: Marshmallow_white
   m_TagString: collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2603,7 +2603,7 @@ GameObject:
   - component: {fileID: 7563638388130991584}
   - component: {fileID: 7563638388130991590}
   m_Layer: 0
-  m_Name: marshmallow_blue
+  m_Name: Marshmallow_blue
   m_TagString: collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
