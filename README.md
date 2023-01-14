@@ -13,7 +13,4 @@ WebGL 1280x720
 ### Visuals: 
 <img src="/visuals/visual1.jpg" alt="Marshmallow game" width =300>
 
-### Project state: 
-resolving issues
-
 Copyright by Pia Lacher
