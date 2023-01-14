@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -41,8 +39,6 @@ public class CollectablesManager : MonoBehaviour
     [SerializeField]
     private GameObject whiteMarshmallow;
 
-
-    // Start is called before the first frame update
     void Start()
     {
         marshmallowCount = 0;
@@ -55,7 +51,6 @@ public class CollectablesManager : MonoBehaviour
         whiteMarshmallow.SetActive(false);
     }
 
-    // Update is called once per frame
     void Update()
     {
         counter.text = marshmallowCount.ToString();
@@ -65,44 +60,40 @@ public class CollectablesManager : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.name == "marshmallow_pink" && !marshmallowOnBack)
+        if (other.name == "Marshmallow_pink" && !marshmallowOnBack)
         {
             Destroy(collectablesSpawn.marshmallows[0]);
             marshmallowOnBack = true;
             pinkMarshmallowCollected = true;
             spriteRenderer.sprite = catPinkMarshmallow;
-            Debug.Log("Pink Marshmallow is here");
         }
 
-        if (other.name == "marshmallow_blue" && !marshmallowOnBack)
+        if (other.name == "Marshmallow_blue" && !marshmallowOnBack)
         {
             Destroy(collectablesSpawn.marshmallows[1]);
             marshmallowOnBack = true;
             blueMarshmallowCollected = true;
             spriteRenderer.sprite = catBlueMarshmallow;
-            Debug.Log("Blue Marshmallow is here");
         }
 
 
-        if (other.name == "marshmallow_green" && !marshmallowOnBack)
+        if (other.name == "Marshmallow_green" && !marshmallowOnBack)
         {
             Destroy(collectablesSpawn.marshmallows[2]);
             marshmallowOnBack = true;
             greenMarshmallowCollected = true;
             spriteRenderer.sprite = catGreenMarshmallow;
-            Debug.Log("Green Marshmallow is here");
         }
 
-        if (other.name == "marshmallow_white" && !marshmallowOnBack)
+        if (other.name == "Marshmallow_white" && !marshmallowOnBack)
         {
             Destroy(collectablesSpawn.marshmallows[3]);
             marshmallowOnBack = true;
             whiteMarshmallowCollected = true;
             spriteRenderer.sprite = catWhiteMarshmallow;
-            Debug.Log("White Marshmallow is here");
         }
 
-        if (other.name == "hotchocolate" && marshmallowOnBack)
+        if (other.name == "Hotchocolate" && marshmallowOnBack)
         {
             marshmallowOnBack = false;
             spriteRenderer.sprite = catOriginal;
@@ -129,12 +120,11 @@ public class CollectablesManager : MonoBehaviour
                 whiteMarshmallowCollected = false;
             }
 
-            if (other.name == "hotchocolate" && marshmallowCount > 3)
+            if (other.name == "Hotchocolate" && marshmallowCount > 3)
             {
                 SceneManager.LoadScene("YouWon");
             }
         }
-
         
     }
 }

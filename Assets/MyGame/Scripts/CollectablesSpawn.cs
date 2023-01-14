@@ -1,16 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class CollectablesSpawn : MonoBehaviour
 {
 
     public GameObject[] marshmallows;
-
     public CollectablesManager collectablesManager;
 
-
-    // Start is called before the first frame update
     void Start()
     {
 
@@ -26,19 +21,16 @@ public class CollectablesSpawn : MonoBehaviour
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (collectablesManager.pinkMarshmallowCollected)
         {
-            Debug.Log("blueMarshmallow visible");
             marshmallows[1].SetActive(true);
 
         }
 
         if (collectablesManager.blueMarshmallowCollected)
         {
-            Debug.Log("greenMarshmallow visible");
             marshmallows[2].SetActive(true);
         }
 

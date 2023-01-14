@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SpeedChanges : MonoBehaviour
@@ -16,7 +15,6 @@ public class SpeedChanges : MonoBehaviour
     [SerializeField]
     private GameObject player;
 
-    // Start is called before the first frame update
     void Start()
     {
         for (int i = 0; i < 3; i++)
@@ -26,14 +24,8 @@ public class SpeedChanges : MonoBehaviour
 
         for (int i = 0; i < 3; i++)
         {
-            SpawnBooster(cocoaPuddle);
+            SpawnPuddle(cocoaPuddle);
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     void SpawnBooster(GameObject booster)
@@ -52,7 +44,6 @@ public class SpeedChanges : MonoBehaviour
     {
         if (other.tag == "booster")
         {
-            Debug.Log("booster activated");
             Destroy(other.gameObject);
             playerManager.normalSpeed = playerManager.normalSpeed + 5;
             player.transform.localScale = new Vector3((float)0.3, (float)0.3, (float)0.3);
@@ -79,7 +70,6 @@ public class SpeedChanges : MonoBehaviour
 
     private IEnumerator WaitTimeBooster()
     {
-        Debug.Log("start coroutine");
         yield return new WaitForSeconds(5);
         player.transform.localScale = new Vector3((float)0.2, (float)0.2, (float)0.2);
         playerManager.normalSpeed = 5;
