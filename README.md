@@ -5,7 +5,7 @@ Help a cat to keep warm during winter by collecting some marshmallows so she enj
 Game is playable multible times, due to all collectibles and enemies being spawned to random positions, making sure it never gets boring!
 
 ### Development platform: 
-Windows 11, Unity 2020.1.5f1, Visual Studio 2019
+Windows 11, Unity 2020.3.18f1, Visual Studio 2019
 
 ### Target platform: 
 WebGL 1280x720 
